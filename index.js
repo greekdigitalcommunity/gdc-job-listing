@@ -13,7 +13,7 @@ build();
 async function getJobs() {
   try {
     const res = await axios.get(API);
-    return res.jobs;
+    return res.data.jobs;
   } catch(e) {
     return require('./data.js').jobs;
   }
