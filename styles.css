@@ -10,6 +10,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  padding-top: 45px;
 }
 .news-item {
   background-color: #fff;
@@ -59,5 +60,36 @@ body {
 }
 .meta, .host {
   font-size: .85em;
-  color; #828282;
+  color: #828282;
 }
+.header {
+  background-color: #ff6600;
+  position: fixed;
+  z-index: 999;
+  height: 55px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header .inner {
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 0px auto;
+  padding: 15px 5px;
+}
+.header .inner a {
+  color: #fff;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 300;
+  letter-spacing: .075em;
+  text-decoration: none;
+}
+
+.github {
+  font-size: .9em;
+  margin: 0;
+  float: right;
+}
+    
