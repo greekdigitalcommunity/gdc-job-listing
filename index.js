@@ -25,4 +25,5 @@ async function build() {
   const renderedPage = nunjucks.render(`index.njk`, {jobs});
   fs.closeSync(fs.openSync(`${__dirname}/public/index.html`, 'a'));
   fs.writeFileSync(`${__dirname}/public/index.html`, renderedPage);
+  fs.createReadStream('./styles.css').pipe(fs.createWriteStream('./public/styles.css'));
 }
