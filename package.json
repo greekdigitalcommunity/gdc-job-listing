@@ -1,0 +1,23 @@
+{
+  "name": "gdc-job-listing",
+  "version": "1.0.0",
+  "description": "A template to list all jobs posted on GDC jobs channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greekdigitalcommunity/gdc-job-listing.git"
+  },
+  "author": "Thanos Korakas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greekdigitalcommunity/gdc-job-listing/issues"
+  },
+  "homepage": "https://github.com/greekdigitalcommunity/gdc-job-listing#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nunjucks": "^3.1.3"
+  }
+}
