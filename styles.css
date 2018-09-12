@@ -94,6 +94,7 @@ body {
 .intro {
   padding: 15px 30px;
   position: fixed;
+  background-color: #f2f3f5;
   text-align: center;
   top: 55px;
   left: 0;
