@@ -2,7 +2,8 @@ const nunjucks = require('nunjucks')
 const axios = require('axios');
 const fs = require('fs')
 
-const API = process.env.API || 'https://greekdigitalcommunity.com/jobs';
+const API = process.env.API || 'https://gdcbot.herokuapp.com/jobs';
+const KEY = process.env.KEY;
 
 if (!fs.existsSync('public')) {
   fs.mkdirSync('public')
@@ -12,13 +13,12 @@ build();
 
 async function getJobs() {
   try {
-    const res = await axios.get(API);
-    return res.data.jobs;
+    const { data: { jobs } } = await axios.get(`${API}?key=${KEY}`);
+    return jobs;
   } catch(e) {
     return require('./data.js').jobs;
   }
 }
-
 
 async function build() {
   const jobs = await getJobs();
